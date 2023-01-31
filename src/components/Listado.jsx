@@ -71,7 +71,8 @@ function Listado( {listadoState, setListadoState} ) {
                 </article>
 
             )
-        }) : <h3 className="peli-item__sin-pelicula">No hay peliculas para mostrar, por favor agrega una :)</h3> }
+            
+        }) : "" }
 
     </>
   )

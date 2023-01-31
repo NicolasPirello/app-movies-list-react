@@ -238,6 +238,11 @@ button{
   margin: 10px 0;
 }
 
+.no-hay-peliculas{
+  margin: 20px auto;
+  color: rgb(172, 4, 4);
+}
+
 
 @media only screen and (min-width: 768px) {
 
