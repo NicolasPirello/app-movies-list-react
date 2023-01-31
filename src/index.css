@@ -1,13 +1,295 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-family: 'Noto Sans', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header{
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+  padding: 10px;
 }
+
+.nav{
+  padding: 5px;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav ul{
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  justify-content: center;
+}
+
+.nav li {
+  padding: 8px 15px;
+  text-align: center;
+}
+
+.nav li:hover {
+  transform: scale(1.1);
+  transition: transform .5s;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 600
+;
+}
+
+.footer{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+
+.footer a{
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.content-and-lateral{
+  max-width: 1700px;
+  min-height: calc(100vh - 255px);
+}
+
+.peli-item{
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0px 0px 6px #ddd;
+  text-align: center;
+}
+
+.peli-item h3, p{
+  padding: 10px;
+}
+
+.peli-item p{
+  color: rgb(161, 161, 161);
+}
+
+.peli-item button{
+  padding: 10px;
+  margin: 5px;
+  font-size: 14px;
+  width: 40%;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+
+.peli-item .edit{
+  background-color: #5dc460;
+}
+
+.peli-item .delete{
+  background-color: #ff6961;
+}
+
+
+.delete:hover{
+  background-color: red;
+  transition: all .5s;
+}
+
+.edit:hover{
+  background-color: green;
+  transition: all .5s;
+}
+
+.search{
+  margin: 20px;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 6px #ddd;
+
+}
+
+.search input{
+  border: none;
+  background-color: #f6f7f9;
+  outline: none;
+  padding: 10px;
+  display: block;
+  margin: 15px auto;
+  border-radius: 5px;
+  min-width: 280px;
+}
+
+.search .title{
+  text-align: center;
+}
+
+.search button{
+  border: none;
+  padding: 15px;
+  display: flex;
+  margin: auto;
+  background-color: #0b70e1;
+  color: white;
+  border-radius: 4px;
+  min-width: 280px;
+  justify-content: center;
+}
+
+.add{
+  margin: 20px;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 6px #ddd;
+}
+
+.add .title{
+  text-align: center;
+}
+
+
+.add input, textarea{
+  border: none;
+  background-color: #f6f7f9;
+  outline: none;
+  padding: 10px;
+  display: block;
+  margin: 15px auto;
+  border-radius: 5px;
+  min-width: 280px;
+}
+
+.add input[type="submit"]{
+  border: none;
+  padding: 10px;
+  display: flex;
+  margin: auto;
+  background-color: #0b70e1;
+  color: white;
+  border-radius: 4px;
+  min-width: initial;
+  cursor: pointer;
+  min-width: 280px;
+  justify-content: center;
+}
+
+.add input[type="submit"]:hover{
+  background-color: #075cbe;
+  transition: all .5s;
+}
+
+
+button{
+  cursor: pointer;
+}
+
+.editarPelicula input{
+  border: none;
+  background-color: #f6f7f9;
+  outline: none;
+  padding: 10px;
+  display: block;
+  margin: 15px auto;
+  border-radius: 5px;
+  min-width: 280px;
+}
+
+.editarPelicula input[type="submit"]{
+  border: none;
+  padding: 10px;
+  display: flex;
+  margin: auto;
+  background-color: #0b70e1;
+  color: white;
+  border-radius: 4px;
+  min-width: initial;
+  cursor: pointer;
+  min-width: 280px;
+  justify-content: center;
+}
+
+.editarPelicula hr{
+  margin: 15px 0;
+  border-color: rgb(255, 255, 255);
+}
+
+.no-encontrado{
+  font-size: 12px;
+  display: block;
+  text-align: center;
+  color: red;
+  margin: 10px 0;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+  .content-and-lateral{
+    display: grid;
+    grid-template-areas: 
+      "content lateral";
+    grid-template-columns: 3fr 1fr
+  }
+
+  .lateral{
+    grid-area: lateral;
+  }
+
+  .content{
+    grid-area: content;
+  }
+
+}
+
+.peli-item__sin-pelicula{
+  text-align: center;
+  padding: 8px;
+  margin: 0 20px;
+}
+
+
+@media only screen and (min-width: 992px) {
+
+ .content{
+  display: grid;
+  margin: 10px;
+  align-content: flex-start;
+ }
+
+ .peli-item{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+ }
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+  .content{
+   grid-template-columns: repeat(3, 1fr);
+  }
+
+  .content-and-lateral{
+    margin: auto;
+  }
+ 
+ }
