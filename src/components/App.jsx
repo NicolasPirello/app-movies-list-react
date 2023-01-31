@@ -52,9 +52,9 @@ function App() {
           </aside> 
 
 
-          <section id="content"  className= {listadoState.length == 0 ? "no-hay-peliculas" : "content"} >
+          <section id="content"  className= {(listadoState == null || listadoState == 0) ? "no-hay-peliculas" : "content"} >
 
-          {listadoState.length == 0 ? 
+          {(listadoState == null || listadoState == 0) ? 
           
           <h3 className="peli-item__sin-pelicula">No hay peliculas para mostrar, por favor agrega una :)</h3>
           
